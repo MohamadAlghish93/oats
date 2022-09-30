@@ -17,6 +17,9 @@ def draw_pie_chart(percentage):
     fig.update_traces(marker=dict(colors=color_discrete_map))
 
     fig.update_layout(
-        title_text="Your resume matches")
+        title_text="Your resume matches",
+        # Add annotations in the center of the donut pies.
+        annotations=[dict(text=f'{percentage}%', x=0.5, y=0.5, font_size=20, showarrow=False)]
+                )
     html = fig.to_html(include_plotlyjs="require", full_html=False)
     return html
