@@ -1,3 +1,6 @@
+# system libs
+import io
+
 # PDF resume
 from pdfminer.converter import TextConverter
 from pdfminer.pdfinterp import PDFPageInterpreter
@@ -38,7 +41,6 @@ def read_word_resume(word_doc):
     
     resume = docx2txt.process(word_doc)
     resume = str(resume)
-    #print(resume)
     text =  ''.join(resume)
     text = text.replace("\n", "")
     
