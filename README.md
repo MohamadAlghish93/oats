@@ -1,5 +1,7 @@
 # ATSG
 
+![oats application](img/oats_application.png)
+
 ## Run
 
 ```python
